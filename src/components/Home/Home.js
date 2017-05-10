@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {ItemList, ItemForm} from './components/Item'
-import {loadItems, createItem, deleteItem} from './libs/ajax'
-import {generateId, addItem, removeItem} from './libs/utils'
+import './Home.css';
+import {ItemList, ItemForm} from '../Item';
+import {loadItems, createItem, deleteItem} from '../../libs/ajax';
+import {generateId, addItem, removeItem} from '../../libs/utils';
+import {Header} from '../Header';
+
 
 class App extends Component {
   state = {
@@ -71,10 +72,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>React Items</h2>
-        </div>
+        <Header title="React Item List"/>
         <div className="Item-App">
           {this.state.errorMessage && <span className="error-message">{this.state.errorMessage}</span>}
           {this.state.message && <span className="success-message">{this.state.message}</span>}

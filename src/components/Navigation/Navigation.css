@@ -1,0 +1,13 @@
+.Navigation {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.Navigation ul {
+  padding: 10px 0;
+}
+
+.Navigation ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
