@@ -1,7 +1,7 @@
 ## React Seed Project
-+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-This is a 'in progress' seed project to be used for newly React apps. it has a small example of addItem, removeItem examples, some utils as well.
+In addition to what 'Create React App' offered, here has been added the router, and some simple examples in order to get started fast.
 
 ## Local mock server
 I have added a local mock server with some data using 'json server'
