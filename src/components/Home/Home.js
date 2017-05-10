@@ -3,8 +3,6 @@ import './Home.css';
 import {ItemList, ItemForm} from '../Item';
 import {loadItems, createItem, deleteItem} from '../../libs/ajax';
 import {generateId, addItem, removeItem} from '../../libs/utils';
-import {Header} from '../Header';
-
 
 class App extends Component {
   state = {
@@ -72,7 +70,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header title="React Item List"/>
         <div className="Item-App">
           {this.state.errorMessage && <span className="error-message">{this.state.errorMessage}</span>}
           {this.state.message && <span className="success-message">{this.state.message}</span>}
