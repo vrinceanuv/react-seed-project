@@ -12,7 +12,7 @@ I have added a local mock server with some data using 'json server'
 $ npm install
 $ npm install -g json-server
 $ json-server -p 8080 --watch data.json
-$ npm run
+$ npm run start
 $ npm run test
 ```
 
