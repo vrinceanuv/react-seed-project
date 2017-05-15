@@ -28,8 +28,6 @@ class App extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    console.log(this.state.items);
-
     const newId = generateId()
     const newItem = {id: newId, name: this.state.currentItem}
     const updatedItems = addItem(this.state.items, newItem)

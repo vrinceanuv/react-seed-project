@@ -11,7 +11,7 @@ ReactDOM.render(
   <Router>
     <div>
       <Header title="Welcome to React"/>
-      
+
       <Route exact path="/" component={App}/>
       <Route path="/about" component={About}/>
     </div>
