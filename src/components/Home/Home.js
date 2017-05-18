@@ -32,8 +32,6 @@ class App extends Component {
     const newItem = {id: newId, name: this.state.currentItem}
     const updatedItems = addItem(this.state.items, newItem)
 
-    console.log(updatedItems);
-
     this.setState({
       items: updatedItems,
       currentItem: '',
