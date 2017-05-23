@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/Home/Home';
+import Home from './components/Home/Home';
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 import './index.css';
@@ -13,7 +13,7 @@ ReactDOM.render(
     <div>
       <Header title="Welcome to React"/>
       <Switch>
-        <Route exact path="/" component={App}/>
+        <Route exact path="/" component={Home}/>
         <Route exact path="/about" component={About}/>
         <Route component={NotFound}/>
       </Switch>

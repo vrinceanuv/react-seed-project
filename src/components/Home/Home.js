@@ -7,12 +7,17 @@ import {generateId, addItem, removeItem} from '../../libs/utils';
 class App extends Component {
   state = {
     items : [],
-    currentItem: ''
+    currentItem: '',
+    loaded: false
   }
 
   componentDidMount() {
-    loadItems()
-      .then(items => this.setState({items}))
+    // Set only to demonstrate the loader and to have it actually displayed
+    setTimeout(() => {
+      loadItems()
+        .then(items => this.setState({items, loaded:true}))
+    }, 1000)
+
   }
 
   handleRemove = (id, event) => {
@@ -66,18 +71,24 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="Item-App">
-          {this.state.errorMessage && <span className="error-message">{this.state.errorMessage}</span>}
-          {this.state.message && <span className="success-message">{this.state.message}</span>}
-          <ItemForm
-            handleInputValue={this.handleInputValue}
-            handleSubmit={submitHandler}
-            currentItem={this.state.currentItem}/>
+        {!this.state.loaded &&
+          <div className="loader">Loading</div>
+        }
 
-          <ItemList items={this.state.items}
-            handleRemove={this.handleRemove}/>
+        {this.state.loaded &&
+          <div className="Item-App">
+            {this.state.errorMessage && <span className="error-message">{this.state.errorMessage}</span>}
+            {this.state.message && <span className="success-message">{this.state.message}</span>}
+            <ItemForm
+              handleInputValue={this.handleInputValue}
+              handleSubmit={submitHandler}
+              currentItem={this.state.currentItem}/>
 
-        </div>
+            <ItemList items={this.state.items}
+              handleRemove={this.handleRemove}/>
+
+          </div>
+        }
       </div>
     );
   }

@@ -17,6 +17,7 @@ $ npm run test
 ```
 
 ## Features
+- Loading spinner (home component only)
 - Items list (add item, delete item)
 - Local mock server
 - Router
