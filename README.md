@@ -16,6 +16,12 @@ $ npm run start
 $ npm run test
 ```
 
+## Features
+- Items list (add item, delete item)
+- Local mock server
+- Router
+- 404 page (eg: http://localhost:3000/TryToFindMe)
+
 ## Get deploy code
 ```
 $ npm run build
