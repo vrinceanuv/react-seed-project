@@ -4,7 +4,7 @@ import {ItemList, ItemForm} from '../Item';
 import {loadItems, createItem, deleteItem} from '../../libs/ajax';
 import {generateId, addItem, removeItem} from '../../libs/utils';
 
-class App extends Component {
+class Home extends Component {
   state = {
     items : [],
     currentItem: '',
@@ -94,4 +94,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
